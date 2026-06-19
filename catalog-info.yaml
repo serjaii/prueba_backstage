@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  # Nombre único que tendrá el servicio en Backstage
+  name: segundo-servicio 
+  description: Un segundo servicio de prueba alojado en mi GitHub personal
+  annotations:
+    # Vincula el componente a su repositorio de GitHub para mostrar enlaces directos
+    github.com/project-slug: serjaii/nombre-de-tu-repositorio
+    
+    # OPCIONAL: Si este segundo servicio también tiene un pipeline en Jenkins, lo vinculas aquí:
+    # jenkins.io/job-full-name: nombre-del-job-en-jenkins
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:development/guest # Propietario por defecto para pruebas
